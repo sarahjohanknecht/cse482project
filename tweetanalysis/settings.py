@@ -25,7 +25,7 @@ SECRET_KEY = '1gwl^e*%(em--^$e&+0$j^r2i!o%p53-z_4kf&5i)@_fvsgom8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['bigdata-tweetanalysis.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -118,3 +118,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
