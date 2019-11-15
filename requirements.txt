@@ -1,3 +1,6 @@
+geopandas
+pandas
+matplotlib
 django
 gunicorn
 django-heroku
