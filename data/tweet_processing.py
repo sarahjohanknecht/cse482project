@@ -17,11 +17,35 @@ state_dict = {"AL":"Alabama","AK":"Alaska","AZ":"Arizona","AR":"Arkansas",
               "WV":"West Virginia","WI":"Wisconsin","WY":"Wyoming"}
 
 
-with open('tweets.json') as json_file:
-    data = json.load(json_file)
-    #for i in data:
-    print("\ntext:", data['text'])
-    #print("\ncreated_at:", data['created_at'])
-    place = data['place']['full_name']
-    state = state_dict[place[place.index(',')+2:]]
-    print(state)
+with open('tweets-hunter.json') as json_file:
+    count = 1
+    data = []
+    for line in json_file:
+        try:
+            data.append(json.loads(line))
+        except json.decoder.JSONDecodeError:
+            continue
+
+    for i in data:
+        #grab date, text, and state from tweet data
+        text = i['text'] #tweet text
+
+        date = i['created_at'].split(" ")
+        day = date[2] #day
+
+        place = i['place']['full_name']
+        places = place.split(", ")
+        state = "" #state
+        if len(places) > 1:
+            if places[1] == "USA":
+                state = places[0]
+            elif len(places[1]) == 2:
+                state = state_dict[place[place.index(',')+2:]]
+            else:
+                #bad data, so skip
+                state = ""
+                continue
+
+        #preprocess text
+
+        #write to csv file
