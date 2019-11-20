@@ -22,7 +22,7 @@ def buildVocabulary(reader):
     return word_features,all_tweets
 
 
-def extract_features(tweet,vocab):
+def extract_features(tweet):
     tweet_words = set(tweet)
     features = {}
     for word in vocab:
@@ -36,8 +36,9 @@ vocab, all_tweets = buildVocabulary(reader)
 
 #print(all_tweets)
 
-# for tweet in all_tweets:
-#     print(extract_features(tweet, vocab))
+trainingFeatures = nltk.classify.apply_features(extract_features, all_tweets)
+
+print(trainingFeatures)
 
 
 
