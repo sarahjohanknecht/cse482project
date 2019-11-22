@@ -12,13 +12,9 @@ csvFile = open('aggregatedData', 'a')
 csvWriter = csv.writer(csvFile)
 
 csvWriter.writerow(['State', 'Sent', 'Date'])
-
 reader = csv.reader(fp)
-
 line = next(reader)
-
 current_date = line[1]
-
 fp.seek(0)
 
 day_dict = {}
@@ -35,27 +31,14 @@ for line in reader:
     if date != current_date:
 
         print(day_dict)
-
         for state in day_dict:
             positive = day_dict[state]['positive']
             total = day_dict[state]['positive'] + day_dict[state]['negative']
             sentiment_ratio = int(positive/total*100)
             print(state, current_date, sentiment_ratio)
-
             write_date = int(current_date)
-
             csvWriter.writerow([state, sentiment_ratio, write_date])
 
         current_date = date
 
-
-
-
 csvFile.close()
-
-
-
-
-
-
-
