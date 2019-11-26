@@ -4,8 +4,5 @@ from django.views.generic import TemplateView
 
 
 def index(request):
-    return HttpResponse("Hello, world.")
+    return render(request, 'tweets/index.html', {})
 
-
-class IndexView(TemplateView):
-    template_name = 'index.html'
