@@ -22,23 +22,27 @@ def buidTrainingSet(corpusFile, tweetDataFile):
 
     trainingDataSet = []
 
+    writeFile = open(tweetDataFile, 'w')
+    linewriter = csv.writer(writeFile, delimiter=',', quotechar="\"")
+
     for tweet in corpus:
-        try:
-            status = twitter_api.GetStatus(tweet["tweet_id"])
-            print("Tweet fetched" + status.text)
-            tweet["text"] = status.text
-            trainingDataSet.append(tweet)
-            time.sleep(sleep_time)
-        except:
-            continue
-    # now we write them to the empty CSV file
-    with open(tweetDataFile, 'wb') as csvfile:
-        linewriter = csv.writer(csvfile, delimiter=',', quotechar="\"")
-        for tweet in trainingDataSet:
+        if tweet["label"] == "positive" or tweet["label"] == "negative":
+            try:
+                status = twitter_api.GetStatus(tweet["tweet_id"])
+                print("Tweet fetched" + status.text)
+                tweet["text"] = status.text
+                trainingDataSet.append(tweet)
+                time.sleep(sleep_time)
+            except:
+                continue
+
             try:
                 linewriter.writerow([tweet["tweet_id"], tweet["text"], tweet["label"], tweet["topic"]])
+                print("success")
             except Exception as e:
                 print(e)
+
+    writeFile.close()
     return trainingDataSet
 
 def main():

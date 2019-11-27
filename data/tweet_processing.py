@@ -4,7 +4,6 @@ import nltk
 from nltk.tokenize import word_tokenize
 from string import punctuation
 from nltk.corpus import stopwords
-from textblob import TextBlob
 import csv
 
 state_dict = {"AL": "Alabama", "AK": "Alaska", "AZ": "Arizona", "AR": "Arkansas",
@@ -44,6 +43,18 @@ class PreProcessTweets:
         tweet = word_tokenize(tweet)  # remove repeated characters
         return [word for word in tweet if word not in self._stopwords]
 
+def processTrainingData(file):
+    with open(file) as csvFile:
+        processor = PreProcessTweets()
+        trainingData = []
+        reader = csv.reader(csvFile)
+        for line in reader:
+            processed_text = processor.processTweet(line[1])
+            label = line[2]
+
+            trainingData.append((processed_text, label))
+
+    return trainingData
 
 def processTweets(file, training=False):
     with open(file) as jsonFile:
@@ -61,10 +72,6 @@ def processTweets(file, training=False):
             except json.decoder.JSONDecodeError:
                 continue
 
-        negCount = 0
-        posCount = 0
-        neuCount = 0
-
         # grab date, text, and state from tweet data
         for i in data:
             # get the text
@@ -72,20 +79,6 @@ def processTweets(file, training=False):
                 text = i['extended_tweet']['full_text']
             except KeyError:
                 text = i['text']
-
-            # calculate the tweet sentiment if we are processing training data
-            if training:
-                sentiment = TextBlob(text).sentiment.polarity
-
-                if sentiment >= 0.25:
-                    pos_neg = "positive"
-                    posCount += 1
-                elif sentiment <= -0.25:
-                    pos_neg = "negative"
-                    negCount += 1
-                else:
-                    pos_neg = "neutral"
-                    neuCount += 1
 
             processed_text = processor.processTweet(text)
 
@@ -106,17 +99,9 @@ def processTweets(file, training=False):
                     # bad data, so skip
                     continue
 
-            # collect data to return
-            if training:
-                # only use strongly positive/strongly negative data to train!
-                if pos_neg == "positive" or pos_neg == "negative":
-                    processedData.append((processed_text, pos_neg))
+            if state in states: # make sure its a legit state
+                processedData.append((processed_text, state, day))
 
-            else:
-                if state in states: # make sure its a legit state
-                    processedData.append((processed_text, state, day))
-
-    print(posCount, negCount, neuCount)
     jsonFile.close()
     return processedData
 
@@ -146,8 +131,9 @@ class Model:
 
 def main():
     # get the training data and the testing data
-    trainingData = processTweets('tweets-sarah.json', True)
-    testData = processTweets('tweets-sarah.json', False)
+    #trainingData = processTweets('tweets-sarah.json', True)
+    trainingData = processTrainingData('trainingData.csv')
+    testData = processTweets('tweets-allison.json', False)
 
     # build our vocab for our model
     model = Model()
@@ -166,10 +152,11 @@ def main():
         label = classifiedLabels[i]
         classifiedTestData.append([testData[i][0], testData[i][1], testData[i][2], label])
 
+    print(classifiedTestData)
     print("Positive tweets: ", classifiedLabels.count('positive'), "Negative tweets: ",
           classifiedLabels.count('negative'))
 
-    csvFile = open('sarah-testing.csv', 'a')
+    csvFile = open('sentiment-testing.csv', 'a')
     csvWriter = csv.writer(csvFile)
 
     for line in classifiedTestData:
