@@ -1,0 +1,30 @@
+h1 {
+  color: black;
+  text-align: center;
+    font-family: Palatino, serif;
+}
+
+img {
+    height: 500px;
+    width: auto;
+    align-content: center;
+}
+
+input{
+    align-content: center;
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
+.slider {
+    width: 500px;
+    position:relative;
+    left:50%;
+    margin-left:-250px;
+}
