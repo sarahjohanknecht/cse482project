@@ -7,8 +7,8 @@ states = ["Alabama","Alaska","Arizona","Arkansas","California","Colorado","Conne
 "Vermont","Virginia","Washington","West Virginia","Wisconsin","Wyoming"]
 
 
-fp = open('testing.csv')
-csvFile = open('aggregatedData', 'a')
+fp = open('classifiedData.csv')
+csvFile = open('aggregatedData-1.csv', 'a')
 csvWriter = csv.writer(csvFile)
 
 csvWriter.writerow(['State', 'Sent', 'Date'])

@@ -2,6 +2,7 @@
 <html lang="en">
 
 {% load static %}
+<link rel="stylesheet" type="text/css" href="{% static "tweets/index.css" %}">
 <head>
     <meta charset="UTF-8">
     <title>Twitter Sentiment Analysis</title>
@@ -9,6 +10,22 @@
 <body>
     <h1>Twitter Sentiment Analysis</h1>
 
-    <img src="{% static "tweets/map_export2.png" %}" alt="test map">
+    <input  id="valR" class = "slider" type="range" min="1" max="31" value="0" step="1" oninput="showVal(this.value)" onchange="showVal(this.value)" />
+    <img class = "centered" id="img" alt="sentiment map">
+
+<script>
+    var val = document.getElementById("valR").value;
+        document.getElementById("img").src ="{% static 'tweets/map_export1.png' %}";
+
+        function showVal(newVal){
+            console.log(newVal.toString());
+
+          var img = "/static/tweets/map_export";
+          img += newVal.toString();
+          img += ".png";
+          document.getElementById("img").src = img;
+        }
+</script>
+
 </body>
 </html>

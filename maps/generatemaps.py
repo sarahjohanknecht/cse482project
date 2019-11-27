@@ -5,8 +5,8 @@ from mpl_toolkits.axes_grid1 import make_axes_locatable
 import matplotlib.colors as colors
 
 NUM_DAYS = 8  # set this to the number of days we are collecting data for PLUS ONE
-DATES = [31, 2, 7, 8, 11, 12]  # this needs to be changed we we have data from every day
-DATAFILE = '/Users/sarahjohanknecht/F19/cse482/cse482project/tweetanalysis/data/aggregatedData'  # file to read data from
+DATES = [1,4,8,13,14,15,18]  # this needs to be changed we we have data from every day
+DATAFILE = '/Users/sarahjohanknecht/F19/cse482/cse482project/tweetanalysis/data/aggregatedData-1.csv'  # file to read data from
 
 # read in map shp file
 shpPath = "ne_110m_admin_1_states_provinces/ne_110m_admin_1_states_provinces.shp"

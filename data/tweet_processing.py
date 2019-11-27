@@ -147,7 +147,7 @@ class Model:
 def main():
     # get the training data and the testing data
     trainingData = processTweets('tweets-sarah.json', True)
-    testData = processTweets('tweets-hunter.json', False)
+    testData = processTweets('tweets-sarah.json', False)
 
     # build our vocab for our model
     model = Model()
@@ -169,7 +169,7 @@ def main():
     print("Positive tweets: ", classifiedLabels.count('positive'), "Negative tweets: ",
           classifiedLabels.count('negative'))
 
-    csvFile = open('testing.csv', 'a')
+    csvFile = open('sarah-testing.csv', 'a')
     csvWriter = csv.writer(csvFile)
 
     for line in classifiedTestData:
