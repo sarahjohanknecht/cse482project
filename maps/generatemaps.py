@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 import matplotlib.colors as colors
 
-DATES = [17]  # this needs to be changed we we have data from every day
+DATES = [29]  # this needs to be changed we we have data from every day
 #DATES = [1]
 DATAFILE = '/Users/sarahjohanknecht/F19/cse482/cse482project/tweetanalysis/data/aggregatedData-final.csv'  # file to read data from
 

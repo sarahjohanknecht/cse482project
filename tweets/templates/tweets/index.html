@@ -18,6 +18,15 @@
         document.getElementById("img").src ="{% static 'tweets/map_export1.png' %}";
 
         function showVal(newVal){
+            if (newVal === '10'){
+                newVal  = 9;
+            }
+            else if (newVal === '23'){
+                newVal = 22;
+            }
+            else if(newVal === '24'){
+                newVal = 25;
+            }
             console.log(newVal.toString());
           var img = "/static/tweets/map_export";
           img += newVal.toString();
