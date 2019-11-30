@@ -133,7 +133,7 @@ def main():
     # get the training data and the testing data
     #trainingData = processTweets('tweets-sarah.json', True)
     trainingData = processTrainingData('trainingData.csv')
-    testData = processTweets('tweets-allison.json', False)
+    testData = processTweets('tweets-sarah.json', False)
 
     # build our vocab for our model
     model = Model()

@@ -4,8 +4,7 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 import matplotlib.colors as colors
 
-NUM_DAYS = 8  # set this to the number of days we are collecting data for PLUS ONE
-DATES = [1,2,3,4,5,6,7,8,9,11,12,13,14,15,16,18,30,31]  # this needs to be changed we we have data from every day
+DATES = [17]  # this needs to be changed we we have data from every day
 #DATES = [1]
 DATAFILE = '/Users/sarahjohanknecht/F19/cse482/cse482project/tweetanalysis/data/aggregatedData-final.csv'  # file to read data from
 

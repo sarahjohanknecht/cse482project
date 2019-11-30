@@ -1046,3 +1046,853 @@ Wyoming,28,18
 North Dakota,23,18
 Montana,42,18
 South Dakota,40,18
+Texas,31,20
+Florida,33,20
+California,30,20
+Tennessee,34,20
+Indiana,25,20
+Louisiana,35,20
+Missouri,30,20
+Kentucky,29,20
+New York,35,20
+New Jersey,30,20
+Michigan,29,20
+Illinois,33,20
+Utah,33,20
+Massachusetts,31,20
+Arkansas,27,20
+Pennsylvania,32,20
+Nevada,30,20
+Hawaii,32,20
+Ohio,35,20
+New Mexico,28,20
+South Carolina,30,20
+Idaho,37,20
+Virginia,33,20
+Arizona,31,20
+Oregon,32,20
+Mississippi,29,20
+Colorado,28,20
+Georgia,32,20
+Washington,28,20
+Alabama,33,20
+Oklahoma,32,20
+Wisconsin,33,20
+North Carolina,31,20
+Maryland,30,20
+Delaware,27,20
+Kansas,31,20
+Connecticut,35,20
+Alaska,25,20
+New Hampshire,27,20
+Maine,42,20
+Minnesota,32,20
+Rhode Island,30,20
+Vermont,20,20
+Iowa,35,20
+West Virginia,48,20
+Nebraska,35,20
+Wyoming,31,20
+North Dakota,23,20
+Montana,40,20
+South Dakota,42,20
+Texas,31,1
+Florida,34,1
+California,30,1
+Tennessee,33,1
+Indiana,25,1
+Louisiana,35,1
+Missouri,30,1
+Kentucky,29,1
+New York,35,1
+New Jersey,30,1
+Michigan,29,1
+Illinois,32,1
+Utah,33,1
+Massachusetts,31,1
+Arkansas,27,1
+Pennsylvania,33,1
+Nevada,31,1
+Hawaii,31,1
+Ohio,35,1
+New Mexico,26,1
+South Carolina,30,1
+Idaho,38,1
+Virginia,32,1
+Arizona,31,1
+Oregon,31,1
+Mississippi,30,1
+Colorado,28,1
+Georgia,32,1
+Washington,28,1
+Alabama,32,1
+Oklahoma,32,1
+Wisconsin,34,1
+North Carolina,32,1
+Maryland,29,1
+Delaware,27,1
+Kansas,32,1
+Connecticut,34,1
+Alaska,28,1
+New Hampshire,27,1
+Maine,42,1
+Minnesota,33,1
+Rhode Island,30,1
+Vermont,19,1
+Iowa,36,1
+West Virginia,48,1
+Nebraska,33,1
+Wyoming,32,1
+North Dakota,23,1
+Montana,38,1
+South Dakota,45,1
+Texas,31,4
+Florida,34,4
+California,30,4
+Tennessee,33,4
+Indiana,26,4
+Louisiana,36,4
+Missouri,30,4
+Kentucky,29,4
+New York,35,4
+New Jersey,30,4
+Michigan,29,4
+Illinois,32,4
+Utah,33,4
+Massachusetts,31,4
+Arkansas,27,4
+Pennsylvania,32,4
+Nevada,30,4
+Hawaii,32,4
+Ohio,34,4
+New Mexico,25,4
+South Carolina,30,4
+Idaho,39,4
+Virginia,32,4
+Arizona,32,4
+Oregon,31,4
+Mississippi,31,4
+Colorado,27,4
+Georgia,31,4
+Washington,27,4
+Alabama,32,4
+Oklahoma,32,4
+Wisconsin,33,4
+North Carolina,31,4
+Maryland,29,4
+Delaware,28,4
+Kansas,33,4
+Connecticut,35,4
+Alaska,29,4
+New Hampshire,27,4
+Maine,42,4
+Minnesota,33,4
+Rhode Island,30,4
+Vermont,17,4
+Iowa,36,4
+West Virginia,50,4
+Nebraska,33,4
+Wyoming,31,4
+North Dakota,25,4
+Montana,40,4
+South Dakota,43,4
+Texas,31,8
+Florida,34,8
+California,30,8
+Tennessee,33,8
+Indiana,25,8
+Louisiana,35,8
+Missouri,30,8
+Kentucky,28,8
+New York,35,8
+New Jersey,29,8
+Michigan,29,8
+Illinois,33,8
+Utah,31,8
+Massachusetts,32,8
+Arkansas,27,8
+Pennsylvania,32,8
+Nevada,29,8
+Hawaii,31,8
+Ohio,34,8
+New Mexico,27,8
+South Carolina,29,8
+Idaho,38,8
+Virginia,32,8
+Arizona,32,8
+Oregon,31,8
+Mississippi,29,8
+Colorado,27,8
+Georgia,32,8
+Washington,28,8
+Alabama,33,8
+Oklahoma,33,8
+Wisconsin,32,8
+North Carolina,30,8
+Maryland,29,8
+Delaware,28,8
+Kansas,34,8
+Connecticut,35,8
+Alaska,29,8
+New Hampshire,25,8
+Maine,42,8
+Minnesota,33,8
+Rhode Island,26,8
+Vermont,18,8
+Iowa,35,8
+West Virginia,48,8
+Nebraska,32,8
+Wyoming,33,8
+North Dakota,23,8
+Montana,41,8
+South Dakota,43,8
+Texas,31,13
+Florida,34,13
+California,30,13
+Tennessee,33,13
+Indiana,25,13
+Louisiana,34,13
+Missouri,30,13
+Kentucky,28,13
+New York,35,13
+New Jersey,29,13
+Michigan,29,13
+Illinois,33,13
+Utah,31,13
+Massachusetts,32,13
+Arkansas,27,13
+Pennsylvania,32,13
+Nevada,29,13
+Hawaii,31,13
+Ohio,34,13
+New Mexico,27,13
+South Carolina,29,13
+Idaho,38,13
+Virginia,32,13
+Arizona,32,13
+Oregon,31,13
+Mississippi,29,13
+Colorado,27,13
+Georgia,31,13
+Washington,28,13
+Alabama,33,13
+Oklahoma,33,13
+Wisconsin,32,13
+North Carolina,30,13
+Maryland,29,13
+Delaware,28,13
+Kansas,34,13
+Connecticut,35,13
+Alaska,29,13
+New Hampshire,25,13
+Maine,43,13
+Minnesota,32,13
+Rhode Island,26,13
+Vermont,18,13
+Iowa,35,13
+West Virginia,48,13
+Nebraska,32,13
+Wyoming,33,13
+North Dakota,23,13
+Montana,41,13
+South Dakota,43,13
+Texas,31,14
+Florida,34,14
+California,30,14
+Tennessee,33,14
+Indiana,25,14
+Louisiana,34,14
+Missouri,30,14
+Kentucky,28,14
+New York,35,14
+New Jersey,29,14
+Michigan,29,14
+Illinois,33,14
+Utah,32,14
+Massachusetts,32,14
+Arkansas,27,14
+Pennsylvania,32,14
+Nevada,29,14
+Hawaii,31,14
+Ohio,34,14
+New Mexico,27,14
+South Carolina,30,14
+Idaho,38,14
+Virginia,32,14
+Arizona,32,14
+Oregon,31,14
+Mississippi,29,14
+Colorado,27,14
+Georgia,32,14
+Washington,29,14
+Alabama,33,14
+Oklahoma,33,14
+Wisconsin,32,14
+North Carolina,30,14
+Maryland,30,14
+Delaware,28,14
+Kansas,34,14
+Connecticut,35,14
+Alaska,28,14
+New Hampshire,25,14
+Maine,45,14
+Minnesota,32,14
+Rhode Island,26,14
+Vermont,18,14
+Iowa,35,14
+West Virginia,48,14
+Nebraska,32,14
+Wyoming,33,14
+North Dakota,23,14
+Montana,41,14
+South Dakota,43,14
+Texas,31,15
+Florida,33,15
+California,30,15
+Tennessee,33,15
+Indiana,26,15
+Louisiana,34,15
+Missouri,30,15
+Kentucky,28,15
+New York,35,15
+New Jersey,29,15
+Michigan,29,15
+Illinois,32,15
+Utah,33,15
+Massachusetts,32,15
+Arkansas,28,15
+Pennsylvania,32,15
+Nevada,29,15
+Hawaii,31,15
+Ohio,34,15
+New Mexico,28,15
+South Carolina,30,15
+Idaho,38,15
+Virginia,32,15
+Arizona,32,15
+Oregon,32,15
+Mississippi,30,15
+Colorado,27,15
+Georgia,32,15
+Washington,29,15
+Alabama,33,15
+Oklahoma,33,15
+Wisconsin,32,15
+North Carolina,30,15
+Maryland,29,15
+Delaware,28,15
+Kansas,32,15
+Connecticut,35,15
+Alaska,30,15
+New Hampshire,27,15
+Maine,45,15
+Minnesota,33,15
+Rhode Island,27,15
+Vermont,18,15
+Iowa,35,15
+West Virginia,50,15
+Nebraska,31,15
+Wyoming,33,15
+North Dakota,22,15
+Montana,41,15
+South Dakota,44,15
+Texas,31,18
+Florida,34,18
+California,30,18
+Tennessee,33,18
+Indiana,25,18
+Louisiana,33,18
+Missouri,30,18
+Kentucky,27,18
+New York,35,18
+New Jersey,28,18
+Michigan,29,18
+Illinois,32,18
+Utah,34,18
+Massachusetts,33,18
+Arkansas,28,18
+Pennsylvania,32,18
+Nevada,29,18
+Hawaii,32,18
+Ohio,34,18
+New Mexico,29,18
+South Carolina,30,18
+Idaho,38,18
+Virginia,31,18
+Arizona,31,18
+Oregon,32,18
+Mississippi,29,18
+Colorado,27,18
+Georgia,32,18
+Washington,28,18
+Alabama,33,18
+Oklahoma,32,18
+Wisconsin,32,18
+North Carolina,31,18
+Maryland,29,18
+Delaware,26,18
+Kansas,32,18
+Connecticut,35,18
+Alaska,29,18
+New Hampshire,28,18
+Maine,44,18
+Minnesota,32,18
+Rhode Island,28,18
+Vermont,18,18
+Iowa,35,18
+West Virginia,48,18
+Nebraska,31,18
+Wyoming,33,18
+North Dakota,22,18
+Montana,44,18
+South Dakota,42,18
+Texas,31,20
+Florida,33,20
+California,30,20
+Tennessee,33,20
+Indiana,24,20
+Louisiana,34,20
+Missouri,30,20
+Kentucky,27,20
+New York,35,20
+New Jersey,28,20
+Michigan,28,20
+Illinois,32,20
+Utah,33,20
+Massachusetts,33,20
+Arkansas,28,20
+Pennsylvania,32,20
+Nevada,29,20
+Hawaii,32,20
+Ohio,34,20
+New Mexico,29,20
+South Carolina,30,20
+Idaho,40,20
+Virginia,32,20
+Arizona,31,20
+Oregon,32,20
+Mississippi,30,20
+Colorado,27,20
+Georgia,32,20
+Washington,28,20
+Alabama,33,20
+Oklahoma,33,20
+Wisconsin,32,20
+North Carolina,31,20
+Maryland,29,20
+Delaware,25,20
+Kansas,31,20
+Connecticut,35,20
+Alaska,29,20
+New Hampshire,27,20
+Maine,43,20
+Minnesota,33,20
+Rhode Island,29,20
+Vermont,17,20
+Iowa,35,20
+West Virginia,49,20
+Nebraska,31,20
+Wyoming,35,20
+North Dakota,22,20
+Montana,43,20
+South Dakota,44,20
+Texas,31,25
+Florida,33,25
+California,30,25
+Tennessee,34,25
+Indiana,24,25
+Louisiana,35,25
+Missouri,30,25
+Kentucky,27,25
+New York,35,25
+New Jersey,28,25
+Michigan,28,25
+Illinois,32,25
+Utah,33,25
+Massachusetts,33,25
+Arkansas,29,25
+Pennsylvania,32,25
+Nevada,29,25
+Hawaii,32,25
+Ohio,34,25
+New Mexico,29,25
+South Carolina,31,25
+Idaho,39,25
+Virginia,32,25
+Arizona,32,25
+Oregon,33,25
+Mississippi,30,25
+Colorado,27,25
+Georgia,32,25
+Washington,28,25
+Alabama,33,25
+Oklahoma,32,25
+Wisconsin,32,25
+North Carolina,31,25
+Maryland,29,25
+Delaware,25,25
+Kansas,31,25
+Connecticut,36,25
+Alaska,29,25
+New Hampshire,27,25
+Maine,42,25
+Minnesota,34,25
+Rhode Island,28,25
+Vermont,20,25
+Iowa,35,25
+West Virginia,49,25
+Nebraska,30,25
+Wyoming,35,25
+North Dakota,22,25
+Montana,43,25
+South Dakota,44,25
+Texas,31,26
+Florida,33,26
+California,30,26
+Tennessee,34,26
+Indiana,24,26
+Louisiana,35,26
+Missouri,30,26
+Kentucky,29,26
+New York,35,26
+New Jersey,29,26
+Michigan,28,26
+Illinois,32,26
+Utah,32,26
+Massachusetts,33,26
+Arkansas,29,26
+Pennsylvania,32,26
+Nevada,29,26
+Hawaii,30,26
+Ohio,34,26
+New Mexico,29,26
+South Carolina,31,26
+Idaho,39,26
+Virginia,32,26
+Arizona,31,26
+Oregon,33,26
+Mississippi,29,26
+Colorado,27,26
+Georgia,32,26
+Washington,27,26
+Alabama,33,26
+Oklahoma,34,26
+Wisconsin,32,26
+North Carolina,31,26
+Maryland,29,26
+Delaware,24,26
+Kansas,31,26
+Connecticut,36,26
+Alaska,28,26
+New Hampshire,27,26
+Maine,42,26
+Minnesota,33,26
+Rhode Island,28,26
+Vermont,20,26
+Iowa,36,26
+West Virginia,48,26
+Nebraska,30,26
+Wyoming,37,26
+North Dakota,22,26
+Montana,39,26
+South Dakota,44,26
+Texas,31,27
+Florida,33,27
+California,31,27
+Tennessee,34,27
+Indiana,24,27
+Louisiana,35,27
+Missouri,30,27
+Kentucky,29,27
+New York,35,27
+New Jersey,29,27
+Michigan,28,27
+Illinois,32,27
+Utah,32,27
+Massachusetts,33,27
+Arkansas,28,27
+Pennsylvania,32,27
+Nevada,29,27
+Hawaii,30,27
+Ohio,34,27
+New Mexico,29,27
+South Carolina,31,27
+Idaho,39,27
+Virginia,32,27
+Arizona,32,27
+Oregon,33,27
+Mississippi,29,27
+Colorado,28,27
+Georgia,32,27
+Washington,27,27
+Alabama,33,27
+Oklahoma,34,27
+Wisconsin,32,27
+North Carolina,31,27
+Maryland,29,27
+Delaware,23,27
+Kansas,31,27
+Connecticut,36,27
+Alaska,28,27
+New Hampshire,27,27
+Maine,42,27
+Minnesota,34,27
+Rhode Island,28,27
+Vermont,21,27
+Iowa,37,27
+West Virginia,45,27
+Nebraska,29,27
+Wyoming,37,27
+North Dakota,22,27
+Montana,39,27
+South Dakota,44,27
+Texas,31,28
+Florida,34,28
+California,31,28
+Tennessee,34,28
+Indiana,24,28
+Louisiana,35,28
+Missouri,30,28
+Kentucky,29,28
+New York,35,28
+New Jersey,29,28
+Michigan,29,28
+Illinois,32,28
+Utah,31,28
+Massachusetts,32,28
+Arkansas,28,28
+Pennsylvania,32,28
+Nevada,30,28
+Hawaii,28,28
+Ohio,34,28
+New Mexico,29,28
+South Carolina,32,28
+Idaho,39,28
+Virginia,32,28
+Arizona,31,28
+Oregon,32,28
+Mississippi,30,28
+Colorado,28,28
+Georgia,32,28
+Washington,27,28
+Alabama,33,28
+Oklahoma,34,28
+Wisconsin,33,28
+North Carolina,31,28
+Maryland,28,28
+Delaware,22,28
+Kansas,31,28
+Connecticut,36,28
+Alaska,29,28
+New Hampshire,28,28
+Maine,43,28
+Minnesota,38,28
+Rhode Island,28,28
+Vermont,20,28
+Iowa,37,28
+West Virginia,44,28
+Nebraska,30,28
+Wyoming,37,28
+North Dakota,21,28
+Montana,38,28
+South Dakota,41,28
+Texas,32,29
+Florida,34,29
+California,31,29
+Tennessee,34,29
+Indiana,24,29
+Louisiana,36,29
+Missouri,29,29
+Kentucky,30,29
+New York,35,29
+New Jersey,29,29
+Michigan,29,29
+Illinois,31,29
+Utah,32,29
+Massachusetts,32,29
+Arkansas,29,29
+Pennsylvania,32,29
+Nevada,29,29
+Hawaii,28,29
+Ohio,34,29
+New Mexico,29,29
+South Carolina,32,29
+Idaho,40,29
+Virginia,32,29
+Arizona,31,29
+Oregon,33,29
+Mississippi,31,29
+Colorado,28,29
+Georgia,32,29
+Washington,28,29
+Alabama,33,29
+Oklahoma,34,29
+Wisconsin,33,29
+North Carolina,31,29
+Maryland,28,29
+Delaware,23,29
+Kansas,31,29
+Connecticut,37,29
+Alaska,28,29
+New Hampshire,28,29
+Maine,41,29
+Minnesota,38,29
+Rhode Island,29,29
+Vermont,20,29
+Iowa,38,29
+West Virginia,44,29
+Nebraska,30,29
+Wyoming,37,29
+North Dakota,21,29
+Montana,38,29
+South Dakota,39,29
+Texas,32,30
+Florida,33,30
+California,31,30
+Tennessee,34,30
+Indiana,24,30
+Louisiana,36,30
+Missouri,28,30
+Kentucky,30,30
+New York,35,30
+New Jersey,29,30
+Michigan,29,30
+Illinois,31,30
+Utah,32,30
+Massachusetts,32,30
+Arkansas,29,30
+Pennsylvania,32,30
+Nevada,29,30
+Hawaii,28,30
+Ohio,33,30
+New Mexico,29,30
+South Carolina,33,30
+Idaho,40,30
+Virginia,32,30
+Arizona,31,30
+Oregon,32,30
+Mississippi,31,30
+Colorado,28,30
+Georgia,32,30
+Washington,28,30
+Alabama,33,30
+Oklahoma,34,30
+Wisconsin,33,30
+North Carolina,32,30
+Maryland,29,30
+Delaware,24,30
+Kansas,30,30
+Connecticut,36,30
+Alaska,27,30
+New Hampshire,27,30
+Maine,42,30
+Minnesota,38,30
+Rhode Island,29,30
+Vermont,20,30
+Iowa,38,30
+West Virginia,43,30
+Nebraska,31,30
+Wyoming,39,30
+North Dakota,21,30
+Montana,38,30
+South Dakota,39,30
+Texas,31,3
+Florida,33,3
+California,31,3
+Tennessee,34,3
+Indiana,24,3
+Louisiana,37,3
+Missouri,29,3
+Kentucky,30,3
+New York,35,3
+New Jersey,30,3
+Michigan,28,3
+Illinois,32,3
+Utah,31,3
+Massachusetts,32,3
+Arkansas,30,3
+Pennsylvania,32,3
+Nevada,30,3
+Hawaii,30,3
+Ohio,34,3
+New Mexico,29,3
+South Carolina,33,3
+Idaho,37,3
+Virginia,33,3
+Arizona,31,3
+Oregon,33,3
+Mississippi,30,3
+Colorado,28,3
+Georgia,31,3
+Washington,28,3
+Alabama,33,3
+Oklahoma,34,3
+Wisconsin,33,3
+North Carolina,32,3
+Maryland,28,3
+Delaware,24,3
+Kansas,30,3
+Connecticut,36,3
+Alaska,26,3
+New Hampshire,27,3
+Maine,41,3
+Minnesota,38,3
+Rhode Island,30,3
+Vermont,19,3
+Iowa,38,3
+West Virginia,41,3
+Nebraska,31,3
+Wyoming,40,3
+North Dakota,22,3
+Montana,40,3
+South Dakota,41,3
+Texas,31,6
+Florida,33,6
+California,31,6
+Tennessee,34,6
+Indiana,24,6
+Louisiana,37,6
+Missouri,29,6
+Kentucky,30,6
+New York,35,6
+New Jersey,30,6
+Michigan,28,6
+Illinois,31,6
+Utah,31,6
+Massachusetts,32,6
+Arkansas,29,6
+Pennsylvania,32,6
+Nevada,30,6
+Hawaii,29,6
+Ohio,34,6
+New Mexico,28,6
+South Carolina,32,6
+Idaho,36,6
+Virginia,33,6
+Arizona,31,6
+Oregon,33,6
+Mississippi,30,6
+Colorado,29,6
+Georgia,31,6
+Washington,27,6
+Alabama,34,6
+Oklahoma,34,6
+Wisconsin,33,6
+North Carolina,32,6
+Maryland,28,6
+Delaware,23,6
+Kansas,30,6
+Connecticut,36,6
+Alaska,25,6
+New Hampshire,26,6
+Maine,41,6
+Minnesota,37,6
+Rhode Island,30,6
+Vermont,19,6
+Iowa,40,6
+West Virginia,42,6
+Nebraska,31,6
+Wyoming,38,6
+North Dakota,22,6
+Montana,41,6
+South Dakota,40,6
