@@ -14,4 +14,4 @@ Project description: http://cse.msu.edu/~liuhaoc1/cse482/class_project.html
 5. Run aggregateData.py on the processed tweet file. This takes in the data for every single tweet (its location, day, and predicted sentiment), and aggregates the data by state per day, calculating the tweet sentiment for that day (positive tweets/total tweets). 
 6. Run generatemaps.py on the aggregated data file. This takes in the aggregated data and turns it into maps to visualize the tweet sentiment.
 
-Website hosted using Django and Heroku.
+Website hosted using Django and Heroku. Tweets processed and classified with help of the NLTK library. Sentiment maps generated using geopandas library.
