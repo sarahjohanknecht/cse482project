@@ -2,50 +2,56 @@ import csv
 import time
 import twitter
 
-def buidTrainingSet(corpusFile, tweetDataFile):
-    corpus = []
-    # initialize api instance
-    twitter_api = twitter.Api(consumer_key='JYo9isJyYHekNIWeO1N6nPwmn',
-                              consumer_secret='YihdlaZ4itMRpM2otcR5bGpkR7LgJrJdY7Vz5QQcAzLKTmSzwa',
-                              access_token_key='2807633071-UQ122PnRmEJs2A5A9EokHJZ0uzy9zQ7847ijP2n',
-                              access_token_secret='cQGhzBpWdlUDWeFid9wYDyPATdhDsOWR7rluByYqS3nGM')
 
-    # test authentication
-    print(twitter_api.VerifyCredentials())
-    with open(corpusFile, 'r') as csvfile:
-        lineReader = csv.reader(csvfile, delimiter=',', quotechar="\"")
-        for row in lineReader:
-            corpus.append({"tweet_id": row[2], "label": row[1], "topic": row[0]})
+# script adapted from https://towardsdatascience.com/creating-the-twitter-sentiment-analysis-program-in-python-with-naive-bayes-classification-672e5589a7ed
 
-    rate_limit = 180
-    sleep_time = 900 / 180
+def getTrainingData(corpusFile, tweetDataFile):
+    trainingData = []
 
-    trainingDataSet = []
+    #read in the training data csv file (downloaded from https://github.com/karanluthra/twitter-sentiment-training)
+    readFile = open(corpusFile, 'r')
+    lineReader = csv.reader(readFile, delimiter=',', quotechar="\"")
+    for row in lineReader:
+        trainingData.append({"tweet_id": row[2], "label": row[1], "topic": row[0]})
 
+
+    # initialize api instance - set these to your Twitter API keys
+    twitterAPI = twitter.Api(consumer_key='',
+                              consumer_secret='',
+                              access_token_key='',
+                              access_token_secret='')
+
+    sleepTime = 6
+    downloadedTrainingData = []
     writeFile = open(tweetDataFile, 'w')
-    linewriter = csv.writer(writeFile, delimiter=',', quotechar="\"")
+    lineWriter = csv.writer(writeFile, delimiter=',', quotechar="\"")
 
-    for tweet in corpus:
+    for tweet in trainingData:
         if tweet["label"] == "positive" or tweet["label"] == "negative":
             try:
-                status = twitter_api.GetStatus(tweet["tweet_id"])
+                status = twitterAPI.GetStatus(tweet["tweet_id"])
                 print("Tweet fetched" + status.text)
                 tweet["text"] = status.text
-                trainingDataSet.append(tweet)
-                time.sleep(sleep_time)
-            except:
+                downloadedTrainingData.append(tweet)
+                time.sleep(sleepTime)
+
+            except Exception as e:
+                print(e)
                 continue
 
             try:
-                linewriter.writerow([tweet["tweet_id"], tweet["text"], tweet["label"], tweet["topic"]])
+                lineWriter.writerow([tweet["tweet_id"], tweet["text"], tweet["label"]])
                 print("success")
+
             except Exception as e:
                 print(e)
 
     writeFile.close()
-    return trainingDataSet
+    readFile.close()
+    return downloadedTrainingData
+
 
 def main():
-    buidTrainingSet('corpus.csv', 'trainingData.csv')
+    getTrainingData('corpus.csv', 'trainingData.csv') #send the file to read training data from, and the file to write training data to
 
 main()
