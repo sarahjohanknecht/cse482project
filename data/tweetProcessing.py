@@ -5,6 +5,7 @@ from nltk.tokenize import word_tokenize
 from string import punctuation
 from nltk.corpus import stopwords
 import csv
+import textblob
 
 state_dict = {"AL": "Alabama", "AK": "Alaska", "AZ": "Arizona", "AR": "Arkansas",
               "CA": "California", "CO": "Colorado", "CT": "Connecticut",
@@ -34,26 +35,22 @@ states = ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", 
 
 
 # tweet pre processor adapted for project use from https://gist.github.com/AnasAlmasri/af0b92428b00708b4cc710370ff3c82e#file-sentimentanalysis-py
-class Processor:
-    def __init__(self):
-        self._stopwords = set(stopwords.words('english') + list(punctuation) + ['AT_USER', 'URL'])
-
-    def processTweet(self, tweet):
-        tweet = tweet.lower()  # convert text to lower-case
-        tweet = re.sub('((www\.[^\s]+)|(https?://[^\s]+))', 'URL', tweet)  # remove URLs
-        tweet = re.sub('@[^\s]+', 'AT_USER', tweet)  # remove usernames
-        tweet = re.sub(r'#([^\s]+)', r'\1', tweet)  # remove the # in #hashtag
-        tweet = word_tokenize(tweet)  # remove repeated characters
-        return [word for word in tweet if word not in self._stopwords]
+def processTweet(tweet):
+    stop_words = set(stopwords.words('english') + list(punctuation) + ['AT_USER', 'URL'])
+    tweet = tweet.lower()  # convert text to lower-case
+    tweet = re.sub(r'#([^\s]+)', r'\1', tweet)  # remove the # in #hashtag
+    tweet = re.sub('((www\.[^\s]+)|(https?://[^\s]+))', 'URL', tweet)  # remove URLs
+    tweet = re.sub('@[^\s]+', 'AT_USER', tweet)  # remove any usernames in the tweet
+    tweet = word_tokenize(tweet)  # remove repeated or unnecessary characters
+    return [word for word in tweet if word not in stop_words]
 
 
 def processTrainingData(file):
     with open(file) as csvFile:
-        processor = Processor()
         trainingData = []
         reader = csv.reader(csvFile)
         for line in reader:
-            processed_text = processor.processTweet(line[1])
+            processed_text = processTweet(line[1])
             label = line[2]
             trainingData.append((processed_text, label))
 
@@ -66,7 +63,6 @@ def processTweets(file, training=False):
         # nltk.download('stopwords')
         # nltk.download('punkt')
 
-        processor = Processor()
         processedData = []
         data = []
 
@@ -84,7 +80,7 @@ def processTweets(file, training=False):
             except KeyError:
                 text = i['text']
 
-            processed_text = processor.processTweet(text)
+            processed_text = processTweet(text)
 
             # get the day
             date = i['created_at'].split(" ")
@@ -104,53 +100,69 @@ def processTweets(file, training=False):
                     continue
 
             if state in states:  # make sure its a legit state
-                processedData.append((processed_text, state, day))
+                processedData.append((processed_text, state, day, text))
 
     jsonFile.close()
     return processedData
 
 
 # adapted for project use from https://towardsdatascience.com/creating-the-twitter-sentiment-analysis-program-in-python-with-naive-bayes-classification-672e5589a7ed
-class Model:
+class ClassificationVocab:
     def __init__(self):
         self.wordFeatures = []
 
-    def buildVocabulary(self, data):
+    def buildWordVocab(self, tweets):
         words = []
-
-        for tweet in data:
+        for tweet in tweets:
             for word in tweet[0]:
                 words.append(word)
-
         wordList = nltk.FreqDist(words)
-        wordFeatures = wordList.keys()
-        self.wordFeatures = wordFeatures
+        self.wordFeatures = wordList.keys()
 
-    def features(self, tweet):
+    def getWordFeatures(self, tweet):
         tweet_words = set(tweet)
-        features = {}
-        for word in self.wordFeatures:
-            features['contains(%s)' % word] = (word in tweet_words)
-        return features
-
+        return dict([(word, word in tweet_words) for word in self.wordFeatures])
 
 def main():
     # get the training data and the testing data
     trainingData = processTrainingData('trainingData.csv')  # file with training data (pre classified tweets)
     testData = processTweets('tweets-sarah.json', False)  # file with tweets to classify
+    testData.extend(processTweets('tweets-allison.json'))
+    testData.extend(processTweets('tweets-hunter.json'))
 
     # build our vocab for our model
-    model = Model()
-    model.buildVocabulary(trainingData)
-    trainingFeatures = nltk.classify.apply_features(model.features, trainingData)
+    vocab = ClassificationVocab()
+    vocab.buildWordVocab(trainingData)
+    trainingFeatures = nltk.classify.apply_features(vocab.getWordFeatures, trainingData)
 
     # train the model!
     classifier = nltk.NaiveBayesClassifier.train(trainingFeatures)
 
     # classify the testing data
     classifiedLabels = []
+    actualLabels = []
+    correct = 0
     for tweet in testData:
-        classifiedLabels.append(classifier.classify(model.features(tweet[0])))
+        text = tweet[0]
+        processed_tweet = ""
+        for word in text:
+            processed_tweet += word + " "
+        classifiedLabels.append(classifier.classify(vocab.getWordFeatures(text)))
+        blob = textblob.TextBlob(processed_tweet)
+        sentiment = blob.sentiment.polarity
+        if sentiment <= 0:
+            actualLabels.append('negative')
+        else:
+            actualLabels.append('positive')
+
+    #to see the tweets & how they're classified, uncomment this!
+    for i in range(0, len(classifiedLabels)):
+        if classifiedLabels[i] == actualLabels[i]:
+            #print([testData[i][3], testData[i][0], classifiedLabels[i], actualLabels[i]])
+            correct += 1
+
+    # calculate accuracy of our vocab in comparison with text blob
+    print("Accuracy: ", correct / len(classifiedLabels))
 
     # get rid of the tweet text & match the label to the state/day for that tweet
     classifiedTestData = []
@@ -158,11 +170,11 @@ def main():
         label = classifiedLabels[i]
         classifiedTestData.append([testData[i][0], testData[i][1], testData[i][2], label])
 
-    print(classifiedTestData)
+    #print(classifiedTestData)
     print("Positive tweets: ", classifiedLabels.count('positive'), "Negative tweets: ",
           classifiedLabels.count('negative'))
 
-    csvFile = open('sentiment-testing.csv', 'a')
+    csvFile = open('test.csv', 'a')
     csvWriter = csv.writer(csvFile)
 
     for line in classifiedTestData:
